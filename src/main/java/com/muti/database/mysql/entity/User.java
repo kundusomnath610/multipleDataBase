@@ -1,4 +1,4 @@
-package com.muti.database.postgresql.entity;
+package com.muti.database.mysql.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,20 +12,29 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="entities")
+@Table(name = "Produt Table")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Builder
-public class Product {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long book_id;
 
-    private String name;
+    private String title;
 
-    private String description;
+    private String author;
+
+    private Long price;
+
+    private Long date;
+
+    private String category;
+
+    private int in_stock;
+
 
 }

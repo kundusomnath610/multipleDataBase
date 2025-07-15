@@ -6,6 +6,6 @@ import com.muti.database.postgresql.entity.Product;
 
 public interface ProductRepo extends JpaRepository <Product, Long> {
 
-    
+    Product findByTitle(String title);
 
 }
